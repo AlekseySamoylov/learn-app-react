@@ -1,0 +1,7 @@
+version: '2'
+services:
+  learn-app:
+    build: .
+    ports:
+      - 80:3000
+      - 35729:35729

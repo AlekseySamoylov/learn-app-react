@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid  from 'react-bootstrap/lib/Grid';
+import Grid from 'react-bootstrap/lib/Grid';
 import Button from 'react-bootstrap/lib/Button';
 import axios from 'axios';
 import Card from './Card';
@@ -48,10 +48,11 @@ class PhraseCard extends React.Component {
     getCards() {
         axios.get('http://localhost:8080/api/card')
             .then((response) => {
-                console.log(response);
-                this.setState({
-                    card: response.data[PhraseCard.getRandomInt(0, response.data.length - 1)]
-                });
+                if (response.data.length > 0) {
+                    this.setState({
+                        card: response.data[PhraseCard.getRandomInt(0, response.data.length - 1)]
+                    });
+                }
             })
             .catch(function (error) {
                 console.log(error);

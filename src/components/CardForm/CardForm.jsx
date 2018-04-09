@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Grid  from 'react-bootstrap/lib/Grid';
+import Grid from 'react-bootstrap/lib/Grid';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
@@ -70,6 +70,8 @@ class CardForm extends Component {
                 }
             });
             document.getElementById("myForm").reset();
+        }).catch(function (error) {
+            console.log(error);
         });
 
     }

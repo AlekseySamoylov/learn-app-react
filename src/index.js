@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import '../../bootstrap.css';
+import './bootstrap.css';
 
 import PhraseCard from './components/PhraseCard';
 import CardForm from './components/CardForm';
